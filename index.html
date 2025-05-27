@@ -50,6 +50,33 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 <style id='wp-block-post-content-inline-css'>
 .wp-block-post-content{display:flow-root}
 </style>
+<style>
+    .timeline-table {
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+    }
+    .timeline-table td {
+      padding: 0.3rem 0.75rem;
+      font-size: 20px;
+      font-weight: 800;
+      color: #808080;
+      white-space: nowrap;
+      text-align: center;
+    }
+    .timeline-table td.title {
+      font-size: 24px;
+      font-weight: 800;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    .timeline-table td.title.benchmark { color: #C55A11; }
+    .timeline-table td.title.classical { color: #385724; }
+    .timeline-table td.title.learning { color: #41719C; }
+    .timeline-table a {
+      text-decoration: none;
+      color: inherit;
+    }
+</style>
 <style id='wp-emoji-styles-inline-css'>
 
 	img.wp-smiley, img.emoji {
@@ -215,10 +242,10 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
   <div class="wp-block-button is-style-fill">
     <a 
       class="wp-block-button__link wp-element-button" 
-      href="" 
+      href="https://arxiv.org/abs/2505.19219" 
       style="padding: 0.25em 0.5em; font-size: 0.85em;"
     >
-      arXiv is coming soon!
+      arXiv
     </a>
   </div>
 </div>
@@ -230,18 +257,78 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 
 <div class="wp-block-group alignfull is-layout-constrained wp-container-core-group-is-layout-5c6a5add wp-block-group-is-layout-constrained" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><div class="entry-content wp-block-post-content is-layout-flow wp-block-post-content-is-layout-flow">
 <h3 class="wp-block-heading">Table of Contents</h3>
-<a href="#benchmark" style="color:#C55A11; text-decoration: none; font-weight: 800;"> &nbsp;&nbsp; <i class=""></i> Benchmarks </a> &nbsp; &nbsp; <br>
-<a href="#classical" style="color:#385724; text-decoration: none; font-weight: 800;"> &nbsp;&nbsp; <i class=""></i> Classical Methods</a> &nbsp; &nbsp; <br>
-<a href="#learning" style="color:#41719C; text-decoration: none; font-weight: 800;"> &nbsp;&nbsp; <i class=""></i> Learning-based Methods</a> &nbsp; &nbsp; <br>
-<!-- <a href="#worldgeneration" style="color:#2ca02c; text-decoration: none; font-weight: 600;"> &nbsp;&nbsp; <i class="fas fa-circle"></i> World Generation: Automatic World Generation </a> &nbsp; &nbsp; <br>
-<a href="#agent" style="color:#d62728; text-decoration: none; font-weight: 600;"> &nbsp;&nbsp; <i class="fas fa-circle"></i> Agents: Agents/Agent Architectures </a> &nbsp; &nbsp; <br>
-<a href="#data" style="color:#9467bd; text-decoration: none; font-weight: 600;"> &nbsp;&nbsp; <i class="fas fa-circle"></i> Data: Data/Resources </a> &nbsp; &nbsp; <br>
-<a href="#position" style="color:#8c564b; text-decoration: none; font-weight: 600;"> &nbsp;&nbsp; <i class="fas fa-circle"></i> Position Papers </a> &nbsp; &nbsp; <br>
-<a href="#sharedtask" style="color:#e377c2; text-decoration: none; font-weight: 600;"> &nbsp;&nbsp; <i class="fas fa-circle"></i> Shared Tasks </a> &nbsp; &nbsp; <br>
-<a href="#social" style="color:#7f7f7f; text-decoration: none; font-weight: 600;"> &nbsp;&nbsp; <i class="fas fa-circle"></i> Social Agents: Agent-user or agent-agent dialog </a> &nbsp; &nbsp; <br>
-<a href="#survey" style="color:#bcbd22; text-decoration: none; font-weight: 600;"> &nbsp;&nbsp; <i class="fas fa-circle"></i> Surveys </a> &nbsp; &nbsp; <br>
-<a href="#other" style="color:#17becf; text-decoration: none; font-weight: 600;"> &nbsp;&nbsp; <i class="fas fa-circle"></i> Other </a> &nbsp; &nbsp; <br> -->
-<!-- <span style="color: #444444; font-weight: 600;"> &nbsp;&nbsp; Legend: </span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #ffcc00; font-weight: 600;"><i class="fas fa-star"></i> Very recently added</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color: #ffc266; font-weight: 600;"><i class="fas fa-star"></i> Added in last 90 days</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #C0C0C0; font-weight: 600;"><i class="fas fa-star"></i> Added in last year</span><hr>  -->
+
+<table class="timeline-table">
+    <tr>
+      <td class="title benchmark" colspan="14">
+        <a href="#benchmark">Benchmarks</a>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="#benchmark_2012">2012</a></td>
+      <td><a href="#benchmark_2013">2013</a></td>
+      <td><a href="#benchmark_2014">2014</a></td>
+      <td><a href="#benchmark_2015">2015</a></td>
+      <td><a href="#benchmark_2016">2016</a></td>
+      <td><a href="#benchmark_2017">2017</a></td>
+      <td><a href="#benchmark_2018">2018</a></td>
+      <td><a href="#benchmark_2019">2019</a></td>
+      <td><a href="#benchmark_2020">2020</a></td>
+      <td><a href="#benchmark_2021">2021</a></td>
+      <td><a href="#benchmark_2022">2022</a></td>
+      <td><a href="#benchmark_2023">2023</a></td>
+      <td><a href="#benchmark_2024">2024</a></td>
+      <td><a href="#benchmark_2025">2025</a></td>
+    </tr>
+</table>
+
+  <table class="timeline-table">
+    <tr>
+      <td class="title classical" colspan="14">
+        <a href="#classical">Classical Methods</a>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="#classical_2012">2012</a></td>
+      <td><a href="#classical_2013">2013</a></td>
+      <td><a href="#classical_2014">2014</a></td>
+      <td><a href="#classical_2015">2015</a></td>
+      <td><a href="#classical_2016">2016</a></td>
+      <td><a href="#classical_2017">2017</a></td>
+      <td><a href="#classical_2018">2018</a></td>
+      <td><a href="#classical_2019">2019</a></td>
+      <td><a href="#classical_2020">2020</a></td>
+      <td><a href="#classical_2021">2021</a></td>
+      <td><a href="#classical_2022">2022</a></td>
+      <td><a href="#classical_2023">2023</a></td>
+      <td><a href="#classical_2024">2024</a></td>
+      <td><a href="#classical_2025">2025</a></td>
+    </tr>
+  </table>
+
+  <table class="timeline-table">
+    <tr>
+      <td class="title learning" colspan="14">
+        <a href="#learning">Learning-based Methods</a>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="#learning_2012">2012</a></td>
+      <td><a href="#learning_2013">2013</a></td>
+      <td><a href="#learning_2014">2014</a></td>
+      <td><a href="#learning_2015">2015</a></td>
+      <td><a href="#learning_2016">2016</a></td>
+      <td><a href="#learning_2017">2017</a></td>
+      <td><a href="#learning_2018">2018</a></td>
+      <td><a href="#learning_2019">2019</a></td>
+      <td><a href="#learning_2020">2020</a></td>
+      <td><a href="#learning_2021">2021</a></td>
+      <td><a href="#learning_2022">2022</a></td>
+      <td><a href="#learning_2023">2023</a></td>
+      <td><a href="#learning_2024">2024</a></td>
+      <td><a href="#learning_2025">2025</a></td>
+    </tr>
+  </table>
 <hr>
 
 <a name="benchmark"></a>
@@ -252,8 +339,7 @@ h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-b
 <p>
 <a href="https://arxiv.org/abs/2407.14931" style="color: #54a1cb; text-decoration: none; font-weight: 600;">POGEMA: A Benchmark Platform for Cooperative Multi-Agent Pathfinding</a><br>
 <span style="color: #808080;">Alexey Skrynnik, Anton Andreychuk, Anatolii Borzilov, Alexander Chernyavskiy, Konstantin Yakovlev, Aleksandr Panov.</span><br>
-<!-- <br>
-TLDR: Presents an in-depth survey of text game agents including motivations/position (why use text games?), simulators (and how they compare to 2D/3D simulators), environments, agents, and contemporary/future directions. <br> -->
+<!-- TLDR: Presents an in-depth survey of text game agents including motivations/position (why use text games?), simulators (and how they compare to 2D/3D simulators), environments, agents, and contemporary/future directions. <br> -->
 <!-- <a href="https://github.com/Cognitive-AI-Systems/pogema" ><img alt="Code" src="https://img.shields.io/github/stars/CodeGoat24/DreamText.svg?style=social&amp;label=Official"></a> -->
 <a href="https://github.com/Cognitive-AI-Systems/pogema" target="_blank">
   <img
@@ -265,23 +351,65 @@ TLDR: Presents an in-depth survey of text game agents including motivations/posi
 </p>
 
 <a name="classical"></a>
-
 <h3 class="wp-block-heading"><span style="color:#385724"> <i class=""></i> Classical Methods </span></h3>
 <!-- <p> Classical methods for MAPF.</p> -->
 
+<a name="classical_2025"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2025 </span></h3>
+
+<a name="classical_2024"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2024 </span></h3>
+
+<a name="classical_2023"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2023 </span></h3>
+
+<a name="classical_2022"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2022 </span></h3>
+
+<a name="classical_2021"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2021 </span></h3>
+
+<a name="classical_2020"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2020 </span></h3>
+
+<a name="classical_2019"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2019 </span></h3>
 <p>
-<a href="https://www.sciencedirect.com/science/article/pii/S0004370221001259?via%3Dihub" style="color: #54a1cb; text-decoration: none; font-weight: 600;">Pairwise Symmetry Reasoning for Multi-Agent Path Finding Search</a><br>
-<span style="color: #808080;">Jiaoyang Li, Daniel Harabor, Peter J. Stuckey, Hang Ma, Graeme Gange, Sven Koenig.</span><br>
-<!-- <br>
-TLDR: Presents an in-depth survey of text game agents including motivations/position (why use text games?), simulators (and how they compare to 2D/3D simulators), environments, agents, and contemporary/future directions. <br> -->
-<!-- <a href="https://github.com/Jiaoyang-Li/CBSH2-RTC" ><img alt="Code" src="https://img.shields.io/github/stars/CodeGoat24/DreamText.svg?style=social&amp;label=Official"></a><br> -->
-<a href="https://github.com/Jiaoyang-Li/CBSH2-RTC" target="_blank">
-  <img
-    src="https://img.shields.io/github/stars/Jiaoyang-Li/CBSH2-RTC?style=for-the-badge"
-    alt="GitHub stars"
-  />
-</a>
+  <a href="https://www.sciencedirect.com/science/article/pii/S0004370221001259?via%3Dihub"
+     style="color: #54a1cb; text-decoration: none; font-weight: 600;">
+    Pairwise Symmetry Reasoning for Multi-Agent Path Finding Search
+  </a><br>
+  <span style="color: #808080;">
+    Jiaoyang Li, Daniel Harabor, Peter J. Stuckey, Hang Ma, Graeme Gange, Sven Koenig.
+  </span><br>
+  <a href="https://github.com/Jiaoyang-Li/CBSH2-RTC" target="_blank">
+    <img
+      src="https://img.shields.io/github/stars/Jiaoyang-Li/CBSH2-RTC?style=for-the-badge"
+      alt="GitHub stars"
+    />
+  </a>
 </p>
+
+<a name="classical_2018"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2018 </span></h3>
+
+<a name="classical_2017"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2017 </span></h3>
+
+<a name="classical_2016"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2016 </span></h3>
+
+<a name="classical_2015"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2015 </span></h3>
+
+<a name="classical_2014"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2014 </span></h3>
+
+<a name="classical_2013"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2013 </span></h3>
+
+<a name="classical_2012"></a>
+<h3 class="wp-block-heading" style="font-size: 24px;"><span style="color:#000000"> <i class=""></i> 2012 </span></h3>
 
 <a name="learning"></a>
 
