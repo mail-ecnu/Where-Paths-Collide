@@ -2,4 +2,4 @@
 
 Maintained by Shiyue Wang, Haozheng Xu, Yuhan Zhang, Jingran Lin, Changhong Lu, Xiangfeng Wang, Wenhao Li.
 
-Website: https://wangsh1yue.github.io/Where-Paths-Collide/
+This repository contains code for "[Where-Paths-Collide Website](https://wangsh1yue.github.io/Where-Paths-Collide/)".
