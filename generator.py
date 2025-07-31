@@ -126,31 +126,32 @@ def build_entry_html(entry, year):
     )
 
     # CCF 徽章
-    ccf_value = ""
-    conf_ccf = s(entry.get('CCF', ''))
-    journal_ccf = s(entry.get('CCF.1', ''))
-    if conf and conf_ccf:
-        ccf_value = conf_ccf
-    elif journal and journal_ccf:
-        ccf_value = journal_ccf
-    elif conf_ccf == 'Preprint' or journal_ccf == 'Preprint':
-        ccf_value = 'Preprint'
+    conf_ccf = s(entry.get('CCF', ''))  # 会议对应的 CCF
+    journal_ccf = s(entry.get('CCF.1', ''))  # 期刊对应的 CCF
+    has_conf = bool(s(entry.get('Conference', '')))
+    has_journal = bool(s(entry.get('Journal', '')))
 
-    if ccf_value:
-        if ccf_value == 'A':
-            color = label_color = "red"
-        elif ccf_value == 'B':
-            color = label_color = "orange"
-        elif ccf_value == 'C':
-            color = label_color = "green"
-        else:
-            color = label_color = "lightgrey"
-            if ccf_value not in ['None', 'Preprint']:
-                ccf_value = "None"
-        parts.append(
-            f'  <img src="https://img.shields.io/badge/CCF-{ccf_value}-{color}?style=flat&labelColor={label_color}" '
-            f'alt="CCF {ccf_value}" style="height:1.2em; width:auto; vertical-align:middle;" />'
-        )
+    # 计算要显示的评级：有会议→用会议 CCF（缺省为 None）；否则看期刊；再否则看是否 Preprint
+    if has_conf:
+        rating = conf_ccf if conf_ccf else 'None'
+    elif has_journal:
+        rating = journal_ccf if journal_ccf else 'None'
+    else:
+        # 没有会议/期刊时：如果两处都没给等级，统一按 Preprint；否则用给出的那个
+        rating = conf_ccf or journal_ccf or 'Preprint'
+
+    # 归一到允许集合，避免脏值
+    allowed = {'A', 'B', 'C', 'None', 'Preprint'}
+    rating_norm = rating if rating in allowed else 'None'
+
+    # 颜色映射：None / Preprint 都走浅灰
+    color_map = {'A': 'red', 'B': 'orange', 'C': 'green', 'None': 'lightgrey', 'Preprint': 'lightgrey'}
+    color = color_map[rating_norm]
+
+    parts.append(
+        f'  <img src="https://img.shields.io/badge/CCF-{rating_norm}-{color}?style=flat&labelColor={color}" '
+        f'alt="CCF {rating_norm}" style="height:1.2em; width:auto; vertical-align:middle;" />'
+    )
 
     # 作者/venue 行
     parts.append('<br>')
