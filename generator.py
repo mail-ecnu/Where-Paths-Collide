@@ -1,25 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-"""
-Excel → HTML 生成脚本
-------------------------------------------------
-功能：
-• 读取 Excel（默认 'Total' 工作表），将条目按分类和年份生成 HTML 段落，
-  插入到现有 HTML 模板中的对应分类锚点下。
-• 仅输出有论文的年份（分类内容与目录 Table of Contents 都只显示有论文的年份）。
-• 缺失字段自动忽略（如无 Repo/GitHub 链接、无标签等）。
-• 自动将模板中的 "Last updated: <Month DD, YYYY>" 更新为脚本运行时的日期
-  （默认 Asia/Singapore 时区）；若模板不存在该字样，则在文末追加。
-
-使用示例：
-$ python generator.py \
-    --excel "mapf汇总.xlsx" \
-    --template "index.html" \
-    --output "output_updated.html" \
-    --tz "Asia/Singapore"
-"""
-
 import argparse
 import re
 from pathlib import Path
@@ -441,8 +419,8 @@ def generate_html_from_excel(excel_path, template_html_path, output_html_path, t
 def main():
     parser = argparse.ArgumentParser(description="Generate HTML from Excel and insert into template (with ToC sync).")
     parser.add_argument("--excel", required=True, help="Path to Excel file (e.g., mapf汇总.xlsx)")
-    parser.add_argument("--template", required=True, help="Path to template HTML (e.g., index.html)")
-    parser.add_argument("--output", required=True, help="Path to write updated HTML (e.g., output_updated.html)")
+    parser.add_argument("--template", required=True, help="Path to template HTML (e.g., demo.html)")
+    parser.add_argument("--output", required=True, help="Path to write updated HTML (e.g., index.html)")
     parser.add_argument("--tz", default="Asia/Singapore", help="Timezone for 'Last updated' (default: Asia/Singapore)")
     args = parser.parse_args()
 
